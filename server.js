@@ -65,4 +65,8 @@ app.use("/api/shop/review", shopReviewRouter);
 
 app.use("/api/common/feature", commonFeatureRouter);
 app.use("/api/email", emailRoute);
+app.use("/", (req, res) => {
+  res.send("Hello world!");
+});
+
 app.listen(PORT, () => console.log(`Server is now running on port ${PORT}`));
