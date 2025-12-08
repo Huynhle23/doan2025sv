@@ -150,7 +150,7 @@ router.post("/send-mail-order-success", async (req, res) => {
       <p><strong>Phương thức thanh toán:</strong> ${order.paymentMethod}</p>
       <p><strong>Tổng tiền:</strong> ${Number(order.totalAmount).toLocaleString(
         "vi-VN"
-      )} ₫</p>
+      )} $</p>
       <p><strong>Ngày đặt hàng:</strong> ${new Date(
         order.orderDate
       ).toLocaleString("vi-VN")}</p>
@@ -170,7 +170,7 @@ router.post("/send-mail-order-success", async (req, res) => {
             <p><strong>Số lượng:</strong> ${item.quantity}</p>
             <p><strong>Giá:</strong> ${Number(item.price).toLocaleString(
               "vi-VN"
-            )} ₫</p>
+            )} $</p>
           </div>
         </div>
       `
@@ -243,7 +243,7 @@ const getEmailContent = (status, order) => {
     <p><strong>Phương thức thanh toán:</strong> ${order.paymentMethod}</p>
     <p><strong>Tổng tiền:</strong> ${Number(order.totalAmount).toLocaleString(
       "vi-VN"
-    )} ₫</p>
+    )} $</p>
   `;
 
   const shippingInfo = `

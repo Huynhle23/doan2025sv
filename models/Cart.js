@@ -22,6 +22,9 @@ const CartSchema = new mongoose.Schema(
         capacity: {
           type: String,
         },
+        color: {
+          type: String,
+        },
       },
     ],
   },
